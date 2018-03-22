@@ -9,7 +9,7 @@ class UtmParser {
     'utm_content'
   ]
 
-  static storeUtmParams(
+  static storeUtmParams (
     storageKey,
     storage,
     queryString
@@ -33,7 +33,7 @@ class UtmParser {
     }
   }
 
-  static parseParams(
+  static parseParams (
     queryString,
     paramNames
   ) {
