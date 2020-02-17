@@ -1,6 +1,6 @@
 import chai from 'chai'
 import sinon from 'sinon'
-import { UtmParser } from '../../lib/utm-parser.js'
+import { UtmParser } from '../../lib/utm-parser'
 import { camelCase } from 'lodash'
 
 const assert = chai.assert
