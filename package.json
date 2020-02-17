@@ -1,12 +1,16 @@
 {
   "name": "@permettezmoideconstruire/utm-parser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Store query utm parameters to a get/set store",
-  "main": "lib/utm-parser.min.js",
+  "source": "src/utm-parser.js",
+  "main": "lib/utm-parser.js",
+  "module": "lib/utm-parser.esm.js",
+  "browser": "lib/utm-parser.umd.js",
+  "modern": "lib/utm-parser.modern.js",
   "scripts": {
-    "compile": "webpack --env dev && webpack --env build",
+    "compile": "microbundle",
     "build": "npm run compile && npm run test",
-    "dev": "webpack --progress --colors --watch --env dev",
+    "dev": "microbundle watch",
     "test": "mocha --require @babel/register --colors --recursive ./test/**/*.js",
     "test:watch": "mocha --require @babel/register --colors -w --recursive ./test/**/*.js"
   },
@@ -27,24 +31,12 @@
   },
   "homepage": "https://github.com/permettez-moi-de-construire/store-utm",
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.42",
-    "@babel/core": "7.0.0-beta.42",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.42",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
-    "@babel/preset-env": "7.0.0-beta.42",
-    "@babel/register": "^7.0.0-beta.42",
-    "babel-eslint": "^8.2.2",
-    "babel-loader": "^8.0.0-beta.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "@babel/register": "^7.8.3",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "eslint-loader": "^2.0.0",
-    "mocha": "^4.0.1",
-    "sinon": "^4.4.6",
-    "standard": "^11.0.1",
-    "standard-loader": "^6.0.1",
-    "webpack": "^3.10.0",
-    "yargs": "^10.0.3"
+    "microbundle": "^0.11.0",
+    "mocha": "^7.0.1",
+    "sinon": "^8.1.1",
+    "standard": "^14.3.1"
   },
   "dependencies": {
     "lodash": "^4.17.5"
